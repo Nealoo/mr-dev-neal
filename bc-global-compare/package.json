@@ -1,0 +1,16 @@
+{
+  "name": "@mr-dev-neal/bc-global-compare",
+  "version": "0.0.1",
+  "description": "dev version of moustache republic's bigcommerce plug-in",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "neal",
+  "license": "ISC",
+  "dependencies": {
+    "read-file": "^0.2.0",
+    "write": "^1.0.3"
+  }
+}

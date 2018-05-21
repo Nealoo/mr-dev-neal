@@ -1,0 +1,15 @@
+{
+  "name": "@mr-dev-neal/bc-get-cmspage",
+  "version": "0.0.1",
+  "description": "for bigcommerce get cms page through ajax by the current url name if it's exist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "neal",
+  "license": "ISC",
+  "dependencies": {
+    "@bigcommerce/stencil-utils": "^1.1.2",
+    "jquery": "^3.3.1"
+  }
+}
