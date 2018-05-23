@@ -1,7 +1,7 @@
 {
   "name": "@mr-dev-neal/bc-global-compare",
-  "version": "0.0.3",
-  "description": "dev version of moustache republic's bigcommerce plug-in: auto install cookie compare function",
+  "version": "0.0.2",
+  "description": "dev version of moustache republic's bigcommerce plug-in",
   "main": "index.js",
   "private": false,
   "bin": {

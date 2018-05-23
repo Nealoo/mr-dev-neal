@@ -1,0 +1,49 @@
+#! /usr/bin/env node
+console.log('starting install...');
+
+var read = require('read-file');
+
+var compareHTML = '';
+var compareProducts = '';
+var oldCompareHTML = '';
+var oldCompareProducts = '';
+
+read('../src/compare.js', 'utf8', function(err, buffer) {
+  compareHTML = buffer;
+});
+
+read('../src/compare-products.js', 'utf8', function(err, buffer) {
+  compareProducts = buffer;
+});
+
+read('../../../../assets/js/theme/compare.js', 'utf8', function(err, buffer) {
+  oldCompareHTML = buffer;
+});
+
+read('../../../../assets/js/theme/global/compare-products.js', 'utf8', function(err, buffer) {
+  oldCompareProducts = buffer;
+});
+
+var writeFile = require('write');
+
+setTimeout(function(){
+  console.log('reading finished, now writing');
+  writeFile('../../../../assets/js/theme/compare-old.js', oldCompareHTML, function(err) {
+    if (err) console.log(err);
+  });
+
+  writeFile('../../../../assets/js/theme/global/compare-products-old.js', oldCompareProducts, function(err) {
+    if (err) console.log(err);
+  });
+  setTimeout(function(){
+    console.log('finished backing up, now installing');
+    writeFile('../../../../assets/js/theme/compare.js', compareHTML, function(err) {
+      if (err) console.log(err);
+    });
+
+    writeFile('../../../../assets/js/theme/global/compare-products.js', compareProducts, function(err) {
+      if (err) console.log(err);
+    });
+    console.log('all done, good job, neal!');
+  },1000)
+},1000)
