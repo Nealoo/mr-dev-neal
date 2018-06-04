@@ -5,7 +5,9 @@ npm packages collection for org : @mr-dev-neal
 ## packages list
 
 * bc-global-compare
-> npm i @mr-dev-neal/bc-global-compare -S
+> npm i @mr-dev-neal/bc-global-compare
+
+then go to @mr-dev-neal/bc-global-compare/bin  run `node install`  all done now, enjoy.
 
 save comparing products into cookie, so you can comparing products from different pages.
 
@@ -31,3 +33,7 @@ if( /* you want to replace all content inside $target ? */  ){
 
 getPage('description', $target, isReplace);
 ```
+* bc-ajax-cart
+
+* bc-helpers-doc
+TODO: this will be the docsify handlebars helpers doc

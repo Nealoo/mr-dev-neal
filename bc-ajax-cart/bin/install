@@ -1,0 +1,22 @@
+#! /usr/bin/env node
+
+var read = require('read-file');
+var program = require('commander');
+
+program
+  .version('0.0.1')
+  .option('-h, --help1', 'help')
+  .option('-c, --class [type]', 'class name for add to cart button [class]', 'card-figcaption-button')
+  .parse(process.argv);
+
+if (program.help1) console.log('  -h --help  show help \n  -c --class  specify the add to cart class name ')
+
+if (program.class && !program.help1) console.log('  - %s classname', program.class)
+
+console.log('starting install...');
+
+var ajaxHTML = '';
+
+read('../src/AjaxCart.js', 'utf8', function(err, buffer) {
+  ajaxHTML = buffer;
+});

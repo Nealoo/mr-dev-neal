@@ -1,7 +1,7 @@
 {
-  "name": "@mr-dev-neal/bc-global-compare",
-  "version": "0.0.4",
-  "description": "dev version of moustache republic's bigcommerce plug-in: auto install cookie compare function",
+  "name": "@mr-dev-neal/bc-ajax-cart",
+  "version": "0.0.1",
+  "description": "dev version of moustache republic's bigcommerce plug-in: auto install ajax cart",
   "main": "index.js",
   "private": false,
   "bin": {
@@ -9,11 +9,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "neal-install": "bin/install"
+    "install": "node bin/install"
   },
   "author": "neal",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.15.1",
     "read-file": "^0.2.0",
     "write": "^1.0.3"
   }
